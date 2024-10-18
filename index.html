@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoNex - Advanced Blockchain Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">CryptoNex</div>
+            <div class="menu-icon">☰</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#prices">Prices</a></li>
+                <li><a href="#trends">Trends</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="close-menu">×</li>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to CryptoNex</h1>
+                <p>Revolutionizing the world of finance through blockchain technology</p>
+                <a href="#" class="btn" id="getStartedBtn">Get Started</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Our Features</h2>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-lock"></i>
+                        <h3>Secure Transactions</h3>
+                        <p>State-of-the-art encryption for all your crypto needs</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Real-time Analytics</h3>
+                        <p>Stay ahead with our advanced market insights</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-wallet"></i>
+                        <h3>Multi-currency Wallet</h3>
+                        <p>Store and manage multiple cryptocurrencies in one place</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h3>Instant Exchanges</h3>
+                        <p>Swap between currencies with ease and low fees</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI-Powered Trading</h3>
+                        <p>Leverage machine learning for smarter trades</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cold Storage</h3>
+                        <p>Keep your assets safe with our offline storage solution</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prices" class="crypto-prices">
+            <div class="container">
+                <h2>Live Crypto Prices</h2>
+                <div class="price-ticker" id="priceTicker">
+                    <!-- Prices will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="trends" class="market-trends">
+            <div class="container">
+                <h2>Market Trends</h2>
+                <canvas id="trendChart"></canvas>
+            </div>
+        </section>
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CryptoNex. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Join CryptoNex</h2>
+            <p id="modalDescription">Start your blockchain journey with us!</p>
+    
+            <!-- Sign Up Form -->
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Create a password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="toggle-form">Already have an account? 
+                    <a href="#" id="showLogin">Log in here</a>
+                </p>
+            </form>
+    
+            <!-- Log In Form (Hidden initially) -->
+            <form id="loginForm" style="display:none;">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Log In</button>
+                <p class="toggle-form">Don’t have an account? 
+                    <a href="#" id="showSignup">Sign up here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="script.js"></script>
+    
+</body>
+</html>
